@@ -1,0 +1,31 @@
+body {
+  color: #d4d4d4;
+  background-color: #3E3E3E;
+}
+
+a:link, a:visited, a:active {
+  color: #bda4a4;
+}
+
+a:hover {
+  color: #A33D47;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #282828;
+  color: #8B8B8B;
+}
+
+footer a:link, footer a:visited, footer a:active {
+  color: #A33D47
+}
+
+footer a:hover {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+
+.page-header {
+  border-bottom: 1px solid #4d4d4d;
+}

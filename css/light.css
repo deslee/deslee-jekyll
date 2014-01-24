@@ -1,0 +1,18 @@
+body {
+  color: #3E3E3E;
+  background-color: #F2F2F2;
+}
+
+a:link, a:visited, a:active {
+  color: #A33D47
+}
+
+a:hover {
+  color: #3E3E3E;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #e4e4e4;
+  color: #282828;
+}

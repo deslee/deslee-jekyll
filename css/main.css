@@ -1,0 +1,76 @@
+html,
+body,
+#container {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -30px;
+  padding: 0 0 30px;
+
+  width: 680px;
+}
+
+#push,footer {
+  height: 30px;
+}
+
+footer {
+  text-align: right;
+  padding: 5px 0;
+  padding-right: 10px;
+}
+
+footer .footer {
+  width: 680px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+}
+
+header h1 {
+  margin: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+main section ul li {
+  margin-left: 1.5em;
+}
+
+nav li {
+  display: inline-block;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+nav li:last-child {
+  padding-right: 0;
+}
+nav li:first-child {
+  padding-left: 0;
+}
+
+.fancy-list li {
+  display: inline-block;
+  text-transform: lowercase;
+}
+
+.fancy-list li:last-child:after {
+  content: none;
+}
+
+.fancy-list li:after {
+  content: "  \22C5";
+}
