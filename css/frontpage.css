@@ -1,9 +1,10 @@
 #wrap {
   padding-top:115px;
-  width: 500px;
+  max-width: 500px;
   text-align: center;
 }
 
 nav {
 	text-transform: lowercase;
+	max-width: 500px;
 }

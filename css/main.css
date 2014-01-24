@@ -9,9 +9,9 @@ body,
   height: auto !important;
   height: 100%;
   margin: 0 auto -30px;
-  padding: 0 0 30px;
+  padding: 0 1em 30px;
 
-  width: 680px;
+  max-width: 680px;
 }
 
 #push,footer {
@@ -25,7 +25,7 @@ footer {
 }
 
 footer .footer {
-  width: 680px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -45,8 +45,26 @@ ul {
   padding: 0;
 }
 
-main section ul li {
+main ul li {
   margin-left: 1.5em;
+}
+
+.blogpost {
+  margin-bottom: 1.5em;
+}
+
+.blogpost h2 {
+  display: inline;
+}
+
+.blogpost info {
+  float: right;
+}
+
+.blogpost h2 a:link,
+.blogpost h2 a:visited,
+.blogpost h2 a:hover {
+  color: inherit;
 }
 
 nav li {
@@ -73,4 +91,8 @@ nav li:first-child {
 
 .fancy-list li:after {
   content: "  \22C5";
+}
+
+pre {
+  border-radius: 0;
 }

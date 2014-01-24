@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="blogpost">
+	<h2>{{ page.title }}</h2>
+	<info datetime="{{ date | date: "%Y-%m-%d" }}">
+	  {{ page.date | date: "%b %Y" }}
+	</info>
 
-<div class="post">
-{{ content }}
+	{{ content }}
+
+	{% for lib in page.js-libraries %}
+		<script src="/js/{{lib}}"></script>
+	{% endfor %}
 </div>

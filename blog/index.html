@@ -1,0 +1,8 @@
+---
+layout: default
+title: Blog
+theme: light
+---
+{% for post in site.posts limit:25 %}
+	{% include fullpost.html %}
+{% endfor %}
