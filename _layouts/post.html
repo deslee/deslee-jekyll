@@ -10,7 +10,7 @@ layout: default
 	{{ content }}
 
 	{% for lib in page.js-libraries %}
-		<script src="{{ relative }}js/{{lib}}"></script>
+		<script src="{{ site.relative }}js/{{lib}}"></script>
 	{% endfor %}
 
 	    <div id="disqus_thread"></div>
