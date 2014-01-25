@@ -1,6 +1,8 @@
 body {
   color: #3E3E3E;
-  background-color: #3E3E3E;
+  background:url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKElEQVQYV2O0s7P7z4AHMBKtgJ+fn+Hjx49gs5DZxJuAyxlwE2hnBQDiQxnRKHt6IgAAAABJRU5ErkJggg==
+    );
 }
 
 #wrap {

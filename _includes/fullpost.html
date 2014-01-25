@@ -1,9 +1,11 @@
 <div class="blogpost">
-	<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-
-	<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+	<h2><a href="{{post.url}}" data-ajaxstate>{{ post.title }}</a>
+	<small><time datetime="{{ post.date | date: "%Y-%m-%d" }}">
 	  {{ post.date | date: "%b %d '%y" }}
-	</time>
+	</time></small>
+	</h2>
+
+	
 
 	{{ post.content }}
 

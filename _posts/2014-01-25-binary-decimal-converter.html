@@ -20,7 +20,7 @@ categories: blog
 	</div>
 </div>
 
-<label for="number">Input:</label> <input type="text" id="number" class="form-control" style="display:inline;width: 200px" />
+<label for="number">Input:</label> <input type="number" id="number" class="form-control" style="display:inline;width: 200px" />
 <p>
 <label for="unsigned">Unsigned:</label> <input type="checkbox" id="unsigned" checked> <br /> <button id="submit" class="btn">Submit</button></p>
 
@@ -55,9 +55,19 @@ $('#submit').on('click', function() {
 		}
 	}
 	else {
-		r = Number(num).toString(2)
-		result = '00000000' + r
-		result = result.substr(result.length - Math.max(r.length, 8))
+		if ( num >= 0 ) {
+			r = Number(num).toString(2)
+			result = '00000000' + r
+			result = result.substr(result.length - Math.max(r.length, 8))
+		}
+		else {
+			num *= -1
+			num -= 1
+			r = Number(num).toString(2)
+			result = '00000000' + r
+			result = result.substr(result.length - Math.max(r.length, 8))
+			result = result.replace(/1/g, 'X').replace(/0/g, '1').replace(/X/g, '0')
+		}
 	}
 
 	$('#answer').text("Decimal: " + result)
