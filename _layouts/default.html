@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
@@ -32,7 +31,7 @@
         <div id="container">
             <div id="wrap">&nbsp;
                 <header class="page-header">
-                    <h1>{{ site.name }}</h1>
+                    <h1><a href="/">{{ site.name }}</a></h1>
                     {% if page.exclude contains 'header' %}
                     {% else %}
                         {% include navigation.html %}

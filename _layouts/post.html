@@ -3,9 +3,9 @@ layout: default
 ---
 <div class="blogpost">
 	<h2>{{ page.title }}</h2>
-	<info datetime="{{ date | date: "%Y-%m-%d" }}">
+	<time datetime="{{ page.date | date: "%Y-%m-%d" }}">
 	  {{ page.date | date: "%b %Y" }}
-	</info>
+	</time>
 
 	{{ content }}
 

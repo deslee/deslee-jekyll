@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 html,
 body,
 #container {
@@ -20,8 +23,7 @@ body,
 
 footer {
   text-align: right;
-  padding: 5px 0;
-  padding-right: 10px;
+  padding: 5px;
 }
 
 footer .footer {
@@ -29,23 +31,26 @@ footer .footer {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, serif;
-}
-
 header h1 {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  /*font-family: Georgia, serif;*/
+}
+
 body {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
 ul {
   padding: 0;
 }
 
-main section ul li {
+main ul li {
   margin-left: 1.5em;
 }
 
@@ -57,14 +62,21 @@ main section ul li {
   display: inline;
 }
 
-.blogpost info {
+.blogpost time {
   float: right;
 }
 
-.blogpost h2 a:link,
-.blogpost h2 a:visited,
-.blogpost h2 a:hover {
+h2 a:link,
+h2 a:visited,
+h2 a:hover,
+h1 a:link,
+h1 a:visited,
+h1 a:hover {
   color: inherit;
+}
+
+nav {
+  text-align: left;
 }
 
 nav li {
@@ -83,6 +95,7 @@ nav li:first-child {
 .fancy-list li {
   display: inline-block;
   text-transform: lowercase;
+  margin: 0;
 }
 
 .fancy-list li:last-child:after {
@@ -95,4 +108,9 @@ nav li:first-child {
 
 pre {
   border-radius: 0;
+}
+
+code {
+  color: #A33D47;
+  background-color: #dedede;
 }

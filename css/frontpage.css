@@ -4,7 +4,11 @@
   text-align: center;
 }
 
+nav, footer .footer {
+	max-width: 500px;
+}
+
 nav {
 	text-transform: lowercase;
-	max-width: 500px;
+	text-align: center;
 }
