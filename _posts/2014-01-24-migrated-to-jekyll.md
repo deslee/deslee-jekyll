@@ -24,7 +24,7 @@ Finally, I use Git with my Jekyll directory for revision control.
 
 This makes it much easier than logging into a cms backend, using a web based editor, and submitting my content to the server to be stored on a database.
 
-For more info about Jekyll, read what its creator has to say about it in his blog post, [Blogging Like a Hacker][3]
+To read more about Jekyll, read what its creator has to say about it in his blog post, [Blogging Like a Hacker][3]
 
 [1]: http://jekyllrb.com/
 [2]: http://fuse.sourceforge.net/sshfs.html
