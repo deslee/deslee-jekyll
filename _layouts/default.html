@@ -5,33 +5,33 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <script src="/js/jquery.min.js"></script>
+        <script src="{{ relative }}js/jquery.min.js"></script>
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ relative }}bootstrap/css/bootstrap.min.css">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="{{ relative }}css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="{{ relative }}css/main.css">
 
         <!-- Theme -->
         {% if page.theme %}
-            <link rel="stylesheet" href="/css/{{page.theme}}.css">
+            <link rel="stylesheet" href="{{ relative }}css/{{page.theme}}.css">
         {% else %}
-            <link rel="stylesheet" href="/css/{{site.default_theme}}.css">
+            <link rel="stylesheet" href="{{ relative }}css/{{site.default_theme}}.css">
         {% endif %}
 
         {% for css_name in page.extra_css %}
-            <link rel="stylesheet" href="/css/{{ css_name }}">
+            <link rel="stylesheet" href="{{ relative }}css/{{ css_name }}">
         {% endfor %}
     </head>
     <body>
         <div id="container">
             <div id="wrap">
                 <header class="page-header">
-                    <h1><a href="/">{{ site.name }}</a></h1>
+                    <h1><a href="{{ relative }}">{{ site.name }}</a></h1>
                     {% if page.exclude contains 'header' %}
                     {% else %}
                         {% include navigation.html %}
@@ -44,6 +44,6 @@
             </div>
             {% include footer.html %}
         </div>
-        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ relative }}bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

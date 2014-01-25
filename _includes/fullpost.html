@@ -8,6 +8,6 @@
 	{{ post.content }}
 
 	{% for lib in post.js-libraries %}
-		<script src="/js/{{lib}}"></script>
+		<script src="{{ relative }}js/{{lib}}"></script>
 	{% endfor %}
 </div>
