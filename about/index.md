@@ -16,13 +16,56 @@ I am currently interning at [Captured Dimensions][1], a company specializing in 
 [3]: http://qt-project.org/
 [4]: http://qt-project.org/wiki/PySide
 
+## Work experience
+### Tekzenit - Summer Internship
+
+- Demonstrated skills in learning new middle-tier technologies such as ASP.NET MVC 4, 
+Entity Framework, SQL Server, and Unity Container as well as many front-end libraries such as Twitter Bootstrap, jQuery, and SignalR, linq.js, and TinyMCE.
+- Developed a robust, reusable, and real-time auto updating datagrid to landle large amounts of data with an easy to use user interface with the help of SignalR.
+- Helped implement an email templating system that reduced web server load by offloading email generation and sending responsibilities to a service that could be 
+implemented on a remote server.
+
+
+
 ## Interests
 
-#### Web development
+### Programming
+
+<div class="row">
+	<div class="col-xs-4">
+		<p>Languages:</p>
+		<ul>
+			<li>Java</li>
+			<li>C/C++</li>
+			<li>JavaScript</li>
+			<li>Python</li>
+		</ul>
+	</div>
+	<div class="col-xs-4">
+		<p>Frameworks:</p>
+		<ul>
+			<li>Django</li>
+			<li>Flask</li>
+			<li>ASP.NET MVC 4</li>
+			<li>SignalR</li>
+		</ul>
+	</div>
+	<div class="col-xs-4">
+		<p>Operating Systems:</p>
+		<ul>
+			<li>GNU/Linux</li>
+			<li>Windows</li>
+			<li>Android</li>
+		</ul>
+	</div>
+</div>
+
+
+### Web development
 
 I am currently interested in using [Flask][5] for web development. Like Django, Flask is a powerful web framework. Flask is more lightweight than Django, and can more easily integrate with other third party middleware. With FLask, I want to create a customized personal content management system, as well as an art/photography portfolio manager.
 
-#### Linux home system
+### Linux home system
 
 I want to create a useful [homelab][6], using a [Raspberry Pi][7] that I purchased for $40. My current homelab alraedy makes my life easier by providing a number of services:
 
@@ -38,15 +81,22 @@ I want to create a useful [homelab][6], using a [Raspberry Pi][7] that I purchas
 [8]: http://www.transmissionbt.com/
 [9]: http://www.bittorrent.com/sync
 
-### Links
+## Links
 
-- [Github](https://github.com/deslee)
-- [LinkedIn](http://lnkd.in/-W-6d6)
-- [Facebook](https://www.facebook.com/desmondl)
-
-### Contact
-
-To contact me, send me a message on LinkedIn or Facebook.
+<div class="row">
+	<div class="col-xs-6">
+		<h3>Personal</h3>
+		<ul>
+		<li><a href="https://github.com/deslee">Github</a></li>
+		<li><a href="http://lnkd.in/-W-6d6">LinkedIn</a></li>
+		<li><a href="https://www.facebook.com/desmondl">Facebook</a></li>
+		</ul>
+	</div>
+	<div class="col-xs-6">
+		<h3>Contact</h3>
+		<p>To contact me, send me a message on LinkedIn or Facebook.</p>
+	</div>
+</div>
 
 ### Friends
 

@@ -15,6 +15,7 @@ body,
   padding: 0 1em 30px;
 
   max-width: 680px;
+  padding-top: 40px;
 }
 
 #push,footer {
@@ -22,17 +23,22 @@ body,
 }
 
 footer {
-  text-align: right;
+  text-align: center;
   padding: 5px;
 }
 
 footer .footer {
   max-width: 680px;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 header h1 {
   margin: 0;
+}
+
+.page-header {
+  margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
