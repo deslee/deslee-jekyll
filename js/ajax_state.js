@@ -1,3 +1,6 @@
+function scrollTop() {
+    $("html").animate({ scrollTop: "0px" });
+}
 
 function getState(url) {
     var hostname = url.split('/')[2]
@@ -15,11 +18,13 @@ function getCurrentState() {
 }
 getCurrentState()
 
-window.history.replaceState({data: $('main').html()}, currentState, currentState)
+window.history.replaceState({data: $('main').html(), name: currentState}, currentState, currentState)
 
 function replaceMainSection(data){
-    var delta = 0
-    $('main').html(data); // then animate....
+    var delta = 200
+    $('main').fadeOut(delta)
+    $('main').html(data);
+    $('main').fadeIn(delta)
     return data
 }
 
@@ -31,6 +36,7 @@ function nav_clicked(url){
 
     console.log(currentState)
     console.log(nextState)
+    scrollTop()
 
     if ( currentState != nextState ) {
         $.ajax({
@@ -41,7 +47,7 @@ function nav_clicked(url){
                 var html = $(html)
                 var data = $(html).find('main').html()
                 var data = replaceMainSection(data)
-                window.history.pushState({'data': data}, nextState, nextState)
+                window.history.pushState({data: data, name: nextState}, nextState, nextState)
                 NProgress.done()
                 getCurrentState()
             }
@@ -62,12 +68,18 @@ $('a[href^="/"]').click(function(e){
 })
 
 window.onpopstate = function(event) {
-    NProgress.start();
     var state = event.state
-    if (state) {
-        var data = state.data
-        replaceMainSection(state.data)
+    if (state != null && state.name != currentState) {
+        console.log(state)
+        NProgress.start();
+
+        if (state) {
+            var data = state.data
+            replaceMainSection(state.data)
+        }
+
+        scrollTop()
+        getCurrentState()
+        NProgress.done();
     }
-    getCurrentState()
-    NProgress.done();
 }

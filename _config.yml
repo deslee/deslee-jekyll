@@ -3,4 +3,4 @@ markdown: redcarpet
 pygments: true
 default_theme: hybrid
 permalink: /:categories/:title.html
-relative: /deslee-jekyll/
+relative: /
