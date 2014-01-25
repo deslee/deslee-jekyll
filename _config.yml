@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 default_theme: light
 permalink: /:categories/:title.html
+relative: /
