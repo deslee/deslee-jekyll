@@ -1,6 +1,6 @@
 name: Desmond Lee
 markdown: redcarpet
 pygments: true
-default_theme: light
+default_theme: hybrid
 permalink: /:categories/:title.html
 relative: /

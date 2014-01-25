@@ -1,0 +1,65 @@
+---
+layout: post
+categories: blog
+---
+
+<p>Just a random converter.</p><p>Todo: Negative decimal to binary conversion.</p>
+
+<div>
+	<div class="radio-inline">
+	  <label>
+	    <input type="radio" name="conversion" id="b2d" value="b2d" checked>
+	    Binary to Decimal
+	  </label>
+	</div>
+	<div class="radio-inline">
+	  <label>
+	    <input type="radio" name="conversion" id="d2b" value="d2b">
+	    Decimal to Binary
+	  </label>
+	</div>
+</div>
+
+<label for="number">Input:</label> <input type="text" id="number" class="form-control" style="display:inline;width: 200px" />
+<p>
+<label for="unsigned">Unsigned:</label> <input type="checkbox" id="unsigned" checked> <br /> <button id="submit" class="btn">Submit</button></p>
+
+<p id="answer"></p>
+
+<script>
+
+$('#d2b').click(function() {
+	$("#unsigned").attr("disabled", true);
+})
+$('#b2d').click(function() {
+	$("#unsigned").attr("disabled", false);
+})
+
+$('#submit').on('click', function() {
+	$('#answer').text('')
+
+	num = $('#number').val()
+	unsigned = $('#unsigned').prop('checked')
+	type = $('input[name=conversion]:checked').val()
+
+
+	var result;
+	if (type=='b2d') {
+		if ( !unsigned && num[0] == '1' ){
+		var bin = num.replace(/1/g, 'X').replace(/0/g, '1').replace(/X/g, '0')
+		console.log(bin)
+		result = (parseInt(bin, 2) + 1) * -1
+		}
+		else {
+		  result = parseInt(num, 2)  
+		}
+	}
+	else {
+		r = Number(num).toString(2)
+		result = '00000000' + r
+		result = result.substr(result.length - Math.max(r.length, 8))
+	}
+
+	$('#answer').text("Decimal: " + result)
+})
+</script>

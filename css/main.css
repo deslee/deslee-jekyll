@@ -65,11 +65,15 @@ main ul li {
 }
 
 .blogpost h2 {
-  display: inline;
+  display: inline-block;
 }
 
 .blogpost time {
-  float: right;
+  margin-left: 1em;
+}
+
+label {
+  font-weight: normal;
 }
 
 h2 a:link,

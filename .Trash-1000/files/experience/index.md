@@ -1,7 +1,6 @@
 ---
 layout: default
 title: About
-theme: light
 ---
 <section>
 
