@@ -6,7 +6,7 @@ layout: nil
  
  <title>Desmond Lee</title>
  <link href="http://deslee.me/blog/atom.xml" rel="self"/>
- <link href="http://deslee.me/blog/"/>
+ <link href="http://deslee.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://deslee.me/</id>
  <author>
