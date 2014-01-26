@@ -1,5 +1,5 @@
 function scrollTop() {
-    $("html").animate({ scrollTop: "0px" });
+    $("body,html").animate({ scrollTop: "0px" });
 }
 
 function getState(url) {
@@ -25,6 +25,11 @@ function replaceMainSection(data){
     $('main').fadeOut(delta)
     $('main').html(data);
     $('main').fadeIn(delta)
+
+    if (updateCounters) {
+        updateCounters()
+    }
+
     return data
 }
 
@@ -34,8 +39,6 @@ function nav_clicked(url){
     NProgress.start();
     NProgress.inc();
 
-    console.log(currentState)
-    console.log(nextState)
     scrollTop()
 
     if ( currentState != nextState ) {
@@ -70,7 +73,6 @@ $('a[href^="/"]').click(function(e){
 window.onpopstate = function(event) {
     var state = event.state
     if (state != null && state.name != currentState) {
-        console.log(state)
         NProgress.start();
 
         if (state) {

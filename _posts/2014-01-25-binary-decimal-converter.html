@@ -3,19 +3,19 @@ layout: post
 categories: blog
 ---
 
-<p>Just a random converter.</p><p>Todo: Negative decimal to binary conversion.</p>
+<p>Just a random converter.</p>
 
 <div>
 	<div class="radio-inline">
 	  <label>
-	    <input type="radio" name="conversion" id="b2d" value="b2d" checked>
-	    Binary to Decimal
+	    <input type="radio" name="conversion" id="d2b" value="d2b" checked>
+	    Decimal to Binary
 	  </label>
 	</div>
 	<div class="radio-inline">
 	  <label>
-	    <input type="radio" name="conversion" id="d2b" value="d2b">
-	    Decimal to Binary
+	    <input type="radio" name="conversion" id="b2d" value="b2d" >
+	    Binary to Decimal
 	  </label>
 	</div>
 </div>
@@ -27,7 +27,6 @@ categories: blog
 <p id="answer"></p>
 
 <script>
-
 $('#d2b').click(function() {
 	$("#unsigned").attr("disabled", true);
 })
@@ -36,9 +35,10 @@ $('#b2d').click(function() {
 })
 
 $('#submit').on('click', function() {
-	$('#answer').text('')
-
 	num = $('#number').val()
+	if (!num) {
+		return
+	}
 	unsigned = $('#unsigned').prop('checked')
 	type = $('input[name=conversion]:checked').val()
 
@@ -55,7 +55,7 @@ $('#submit').on('click', function() {
 		}
 	}
 	else {
-		if ( num >= 0 ) {
+		if ( num >= 0 || num < -128) {
 			r = Number(num).toString(2)
 			result = '00000000' + r
 			result = result.substr(result.length - Math.max(r.length, 8))
@@ -66,10 +66,11 @@ $('#submit').on('click', function() {
 			r = Number(num).toString(2)
 			result = '00000000' + r
 			result = result.substr(result.length - Math.max(r.length, 8))
-			result = result.replace(/1/g, 'X').replace(/0/g, '1').replace(/X/g, '0')
+			result = result.replace(/1/g, 'X').replace(/0/g, '1').replace(/X/g, '0') + " (two's complement)"
 		}
+		result = "Binary: " + result
 	}
 
-	$('#answer').text("Decimal: " + result)
+	$('#answer').text(result)
 })
 </script>
