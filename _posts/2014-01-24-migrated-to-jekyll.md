@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: blog
+categories: blog updates
 ---
 
 I migrated my blog to [Jekyll][1] yesterday. It was pretty easy since I didn't have that many posts.
