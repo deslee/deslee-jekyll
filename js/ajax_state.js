@@ -1,14 +1,17 @@
 function scrollTop(callback) {
-    $("html").animate({ scrollTop: "0px"}, {complete: callback});
+    $("html, body").animate({ scrollTop: "0px"}, {complete: callback});
 }
 
 function computeStateName(url) {
     var hostname = url.split('/')[2]
-    var url_after_hostname = 
+    var result = 
         url.substr(
             url.indexOf(hostname) + hostname.length
         )
-    return url_after_hostname
+    if (result != '/' && result.substr(-1) == '/') {
+        result = result.slice(0,-1)
+    }
+    return result
 }
 
 function bindLinks() {
@@ -30,26 +33,32 @@ function replaceMainSection(data){
 function loadState(state, replaceDOM) {
     var delta = 200
     var data = state.data
-    console.log(state)
     NProgress.start();
 
-    scrollTop(function() {
-        console.log('fading out')
-        $('main').fadeOut(delta, function() {
-            if (replaceDOM) {
-                console.log("replacing'")
-                replaceMainSection(state.data)
-            }
+    // decide if we really need to do this
+    if (state.data != $('main').html()) {
+        scrollTop(function() {
+            $('main').animate({right: '100%'}, delta, function() {
+                $('main').css('right', '-100%')
+                if (replaceDOM) {
+                    replaceMainSection(state.data)
+                }
 
-            console.log('fading in')
-            $('main').fadeIn(delta)
-            NProgress.done();
+                $('main').animate({right: '0px'}, delta)
+                NProgress.done();
 
-            if (updateCounters) {
-                updateCounters()
-            } bindLinks()
+                if (updateCounters) {
+                    updateCounters()
+                } bindLinks()
+            })
         })
-    })
+    }
+    else {
+        if (!replaceDOM) {
+            scrollTop()
+        }
+        NProgress.done()
+    }
 }
 
 if ('pushState' in history) {
@@ -64,7 +73,6 @@ if ('pushState' in history) {
 
     function getState(url) {
         var nextStateName = computeStateName(url)
-
         if ( nextStateName != window.history.state.name ) {
             // GET from server
             $.get(url, function(html) {
@@ -78,6 +86,7 @@ if ('pushState' in history) {
             loadState(window.history.state)
         }
     }
+
 
     // someone clicks URL
     function nav_clicked(url){

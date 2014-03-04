@@ -13,7 +13,7 @@ Then, when the Ajax call finishes, the main element in the page fades out, gets 
 
 The code still needs some cleaning up and optimization, but the effects are still pretty cool.
 
-One main setback is if the fetched data from the server prompts loading Javascript. According to the HTML5 standards, scripts inserted via `innerHTML` will not execute, so I used JqueryJQuery's `.html()` method to load scripts loaded from the server. The problem is, when a "heavy" script is loaded, the UI freezes. 
+One main setback is if the fetched data from the server prompts loading Javascript. According to the [HTML5 standards][4], scripts inserted via `innerHTML` will not execute, so I used JQuery's `.html()` method to load scripts loaded from the server. The problem is, when a "heavy" script is loaded, the UI freezes. 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history
 [2]: https://developer.mozilla.org/en-US/docs/AJAX

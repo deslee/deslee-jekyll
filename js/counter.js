@@ -4,9 +4,11 @@ var toggleFooter = function(e) {
 }
 
 updateCounters = function(callback) {
-    $.getJSON(counter_req_link, {url: window.location.href}, 
+    var url = window.location.href
+    var page = url.substring(0, url.lastIndexOf('/') + 1);
+
+    $.getJSON(counter_req_link, {url: page}, 
         function(counter){
-            console.log(counter)
             $('footer [data-target]').each(
                 function(i,e) {
                     var element = $(e)
@@ -14,6 +16,7 @@ updateCounters = function(callback) {
                     element.text(counter[target])
                 }
             )
+            console.log(counter)
             if (callback) {
                 callback(counter)
             }
@@ -22,13 +25,8 @@ updateCounters = function(callback) {
 }
 
 updateCounters(function() {
-    $('.footer').click(function(e) {
-        var good = 
-            e.target == $('#main-footer')[0] ||
-            e.target == $('#extra-footer')[0]
-
-        if (good) {
-            toggleFooter(e)
-        }
+    $('[data-toggle="footer"]').click(function(e) {
+        e.preventDefault()
+        toggleFooter(e)
     })
 })

@@ -2,6 +2,9 @@
 layout: default
 title: About
 ---
+
+Download my resume [here](http://static.deslee.me/resume.pdf).
+
 ## About me
 
 My name is Desmond Lee. I am an undergraduate Software Engineering student at The University of Texas at Dallas. I have a strong interest in web development, Unix based systems, and artificial intelligence / machine learning.
@@ -35,7 +38,7 @@ implemented on a remote server.
 		<p>Languages:</p>
 		<ul>
 			<li>Java</li>
-			<li>C/C++</li>
+			<li>C/C++/C#</li>
 			<li>JavaScript</li>
 			<li>Python</li>
 		</ul>

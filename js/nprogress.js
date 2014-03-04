@@ -15,7 +15,7 @@
   NProgress.version = '0.1.2';
 
   var Settings = NProgress.settings = {
-    minimum: 0.70,
+    minimum: 0.50,
     easing: 'ease',
     positionUsing: '',
     speed: 200,

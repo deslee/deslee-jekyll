@@ -16,14 +16,14 @@ body,
 
   max-width: 680px;
   padding-top: 40px;
+  overflow-x: hidden;
 }
 
 #push,footer {
-  height: 30px;
+  min-height: 30px;
 }
 
 footer {
-  text-align: center;
   padding: 5px;
 }
 
@@ -58,6 +58,10 @@ body {
 
 ul {
   padding: 0;
+}
+
+main {
+  position: relative;
 }
 
 main ul li {
@@ -124,6 +128,6 @@ pre {
 }
 
 code {
-  color: #A33D47;
+  color: #222222;
   background-color: #dedede;
 }
